@@ -1,9 +1,16 @@
 pipeline {
     agent any
+    tools {
+        maven'M2_HOME'
+    }
 
     stages {
         stage('maven commands') {
-            sh 'mvn clean compile install package'
+            steps {
+                sh 'mvn clean compile install package'
+
+            }
+            
         }   
     }
 }
