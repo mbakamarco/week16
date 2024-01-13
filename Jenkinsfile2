@@ -1,0 +1,9 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('maven commands') {
+            sh 'mvn clean compile install package'
+        }   
+    }
+}
