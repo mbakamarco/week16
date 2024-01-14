@@ -20,6 +20,13 @@ pipeline {
             }
             
         } 
+        stage ('upload artifact'){
+            steps {
+                sh 'curl -uadmin:AP5wbmom5TGkdbjABPgTVihehCS -T \
+                target/bio*jar \
+                "http://52.90.22.8:8081/artifactory/geoapp/"'
+            }
+        }
        
     }
 }
