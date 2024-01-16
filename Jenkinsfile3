@@ -1,6 +1,7 @@
 pipeline {
     agent {
         label ('ansible')
+         }
         stages {
             stage ('check current directory') {
                 steps {
@@ -11,5 +12,5 @@ pipeline {
                 }
             }
         }
-    }
+   
 }
